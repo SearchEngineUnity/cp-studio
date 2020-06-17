@@ -1,0 +1,13 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import { MdLink } from 'react-icons/md'
+
+const JumpLinkRenderer = props => (
+  <span>{props.children} <MdLink style={{display: 'inline'}}/></span>
+)
+
+JumpLinkRenderer.propTypes = {
+  children: PropTypes.node.isRequired
+}
+
+export default JumpLinkRenderer
