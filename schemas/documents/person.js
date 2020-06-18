@@ -5,44 +5,44 @@ export default {
   fields: [
     {
       name: 'name',
-      title: "Name",
-      type: 'string'
+      title: 'Name',
+      type: 'string',
     },
     {
       name: 'job',
-      title: "Job Title",
-      type: 'string'
+      title: 'Job Title',
+      type: 'string',
     },
     {
       name: 'organization',
       title: 'Organization',
-      type: 'string',  
+      type: 'string',
     },
     {
       name: 'photo',
-      title: "Photo",
-      type: "image"
+      title: 'Photo',
+      type: 'image',
     },
     {
       name: 'biography',
-      title: "Biography",
-      type: "bio"
-    },    
+      title: 'Biography',
+      type: 'bio',
+    },
     {
       name: 'slug',
-      title: "Slug",
-      type: 'slug'      
+      title: 'Slug',
+      type: 'slug',
     },
     {
       name: 'metaTags',
       type: 'meta',
-      title: "Meta Tags",
-    }
+      title: 'Meta Tags',
+    },
   ],
   preview: {
     select: {
-      title: "name",
-      media: 'photo'
-    }
-  }
-}
+      title: 'name',
+      media: 'photo',
+    },
+  },
+};

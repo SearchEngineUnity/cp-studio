@@ -1,4 +1,4 @@
-import { MdBusiness } from 'react-icons/md'
+import { MdBusiness } from 'react-icons/md';
 
 export default {
   name: 'socialInfo',
@@ -13,40 +13,39 @@ export default {
       type: 'string',
       options: {
         list: [
-          {title: 'Facebook', value: 'facebook'},
-          {title: 'Twitter', value: 'twitter'},
-          {title: 'Instagram', value: 'instagram'},
-          {title: 'Pinterest', value: 'pinterest'},
-          {title: 'LinkedIn', value: 'linkedin'}
-        ]
-      }
+          { title: 'Facebook', value: 'facebook' },
+          { title: 'Twitter', value: 'twitter' },
+          { title: 'Instagram', value: 'instagram' },
+          { title: 'Pinterest', value: 'pinterest' },
+          { title: 'LinkedIn', value: 'linkedin' },
+        ],
+      },
     },
     {
       name: 'link',
       title: 'Link',
-      type: 'url'
+      type: 'url',
     },
   ],
   preview: {
     select: {
-      title: "social",
+      title: 'social',
     },
     prepare({ title }) {
-
       switch (title) {
         case 'facebook':
-          return { title: "Facebook" };   
+          return { title: 'Facebook' };
         case 'twitter':
-          return { title: "Twitter" };
+          return { title: 'Twitter' };
         case 'instagram':
-          return { title: "Instagram" };
-          case 'pinterest':
-            return { title: 'Pinterest' };                 
+          return { title: 'Instagram' };
+        case 'pinterest':
+          return { title: 'Pinterest' };
         case 'linkedin':
-          return { title: 'LinkedIn' };         
+          return { title: 'LinkedIn' };
         default:
-          return { title: "Error" };
+          return { title: 'Error' };
       }
-    }
-  }  
-}
+    },
+  },
+};

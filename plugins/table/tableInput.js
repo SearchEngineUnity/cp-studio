@@ -7,7 +7,7 @@ import FieldSet from 'part:@sanity/components/fieldsets/default';
 import ButtonGrid from 'part:@sanity/components/buttons/button-grid';
 import Button from 'part:@sanity/components/buttons/default';
 
-const createPatchFrom = value => {
+const createPatchFrom = (value) => {
   return PatchEvent.from(set(value));
 };
 
@@ -37,7 +37,7 @@ export default class TableInput extends React.Component {
     return onChange(createPatchFrom(newValue));
   };
 
-  addRow = e => {
+  addRow = (e) => {
     const { value, onChange } = this.props;
     // If we have an empty table, create a new one
     if (!value) return this.initializeTable();
@@ -54,7 +54,7 @@ export default class TableInput extends React.Component {
     return onChange(createPatchFrom(newValue));
   };
 
-  removeRow = index => {
+  removeRow = (index) => {
     const { value, onChange } = this.props;
     // Clone the current table data
     const newValue = { ...value };
@@ -67,7 +67,7 @@ export default class TableInput extends React.Component {
     return onChange(createPatchFrom(newValue));
   };
 
-  addColumn = e => {
+  addColumn = (e) => {
     const { value, onChange } = this.props;
     // If we have an empty table, create a new one
     if (!value) return this.initializeTable();
@@ -80,12 +80,12 @@ export default class TableInput extends React.Component {
     return onChange(createPatchFrom(newValue));
   };
 
-  removeColumn = index => {
+  removeColumn = (index) => {
     const { value, onChange } = this.props;
     // Clone the current table data
     const newValue = { ...value };
     // For each of the rows, remove the cell by index
-    newValue.rows.forEach(row => {
+    newValue.rows.forEach((row) => {
       row.cells.splice(index, 1);
     });
     // If the last cell was removed, clear the table

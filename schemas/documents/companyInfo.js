@@ -1,4 +1,4 @@
-import { MdBusiness } from 'react-icons/md'
+import { MdBusiness } from 'react-icons/md';
 
 export default {
   name: 'companyInfo',
@@ -10,42 +10,42 @@ export default {
     {
       name: 'name',
       title: 'Company name',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'email',
       title: 'Email',
-      type: 'email'
+      type: 'email',
     },
     {
       name: 'phone',
       title: 'Phone Number',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'address1',
       title: 'Address 1',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'address2',
       title: 'Address 2',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'zipCode',
       title: 'ZIP Code',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'city',
       title: 'City',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'country',
       title: 'Country',
-      type: 'string'
+      type: 'string',
     },
-  ]
-}
+  ],
+};

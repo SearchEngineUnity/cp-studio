@@ -1,45 +1,45 @@
-import { GrTableAdd } from 'react-icons/gr'
+import { GrTableAdd } from 'react-icons/gr';
 
 export default {
-  name: "smartTable",
-  title: "Smart Table",
-  type: "object",
+  name: 'smartTable',
+  title: 'Smart Table',
+  type: 'object',
   icon: GrTableAdd,
   fields: [
     {
-      name: "title",
-      type: "string",
-      title: "Table Name",
+      name: 'title',
+      type: 'string',
+      title: 'Table Name',
     },
     {
-      name: "options",
-      type: "string",
-      title: "Presentation options"
+      name: 'options',
+      type: 'string',
+      title: 'Presentation options',
     },
     {
-      name: "colHeading",
-      type: "boolean",
-      title: "This table has a column heading",
+      name: 'colHeading',
+      type: 'boolean',
+      title: 'This table has a column heading',
       options: {
-        layout: "checkbox"
-      }
+        layout: 'checkbox',
+      },
     },
     {
-      name: "rowHeading",
-      type: "boolean",
-      title: "This table has a row heading",
+      name: 'rowHeading',
+      type: 'boolean',
+      title: 'This table has a row heading',
       options: {
-        layout: "checkbox"
-      }
+        layout: 'checkbox',
+      },
     },
     {
-      name: "table",
-      type: "tablePlus",
+      name: 'table',
+      type: 'tablePlus',
     },
   ],
   preview: {
     select: {
-      title: "title",
-    }
-  }
-}
+      title: 'title',
+    },
+  },
+};

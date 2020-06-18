@@ -1,18 +1,18 @@
 export default {
-  name: "navItem",
-  type: "object",
-  title: "Navigation Item",
+  name: 'navItem',
+  type: 'object',
+  title: 'Navigation Item',
   fields: [
-      {
-          name: 'nav',
-          type: 'reference',
-          to: [{type: 'page'}, {type: 'guide'}]
-      }
+    {
+      name: 'nav',
+      type: 'reference',
+      to: [{ type: 'page' }, { type: 'guide' }],
+    },
   ],
   preview: {
     select: {
-      title: "nav.title",
-      subtitle: 'nav.slug.current'
-    }
-  }
-}
+      title: 'nav.title',
+      subtitle: 'nav.slug.current',
+    },
+  },
+};

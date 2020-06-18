@@ -1,32 +1,39 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import client from 'part:@sanity/base/client'
-const { projectId, dataset } = client.config()
+import React from 'react';
+import PropTypes from 'prop-types';
+import client from 'part:@sanity/base/client';
 
-const InlineImageRenderer = props => {
+const { projectId, dataset } = client.config();
 
-    if (props.asset && props.children) {
-        const image = props.asset._ref.replace(/image-/, '').replace(/\-(?![\s\S]*\-)/, '\.')
-        const imageCdn = `https://cdn.sanity.io/images/${projectId}/${dataset}/`
-    
-        return (
-            <span>
-                <img src={`${imageCdn}${image}`} style={{width: '100%', height: 'auto'}}></img>
-                <span>Alt text: {props.children}</span>
+const InlineImageRenderer = (props) => {
+  const { asset, children } = props;
+  if (asset && children) {
+    const image = asset._ref.replace(/image-/, '').replace(/\-(?![\s\S]*\-)/, '.'); // eslint-disable-line
+    const imageCdn = `https://cdn.sanity.io/images/${projectId}/${dataset}/`;
 
-            </span>
-        )
-    } else if (props.children) {
-        return <span>Alt text: {props.children}</span>
-    } else {
-        return null
-    }
-
-}
+    return (
+      <span>
+        <img src={`${imageCdn}${image}`} style={{ width: '100%', height: 'auto' }} alt="inline" />
+        <span>
+          Alt text:
+          {children}
+        </span>
+      </span>
+    );
+  }
+  if (children) {
+    return (
+      <span>
+        Alt text:
+        {children}
+      </span>
+    );
+  }
+  return null;
+};
 
 InlineImageRenderer.propTypes = {
   children: PropTypes.node.isRequired,
-  asset: PropTypes.isRequired
-}
+  asset: PropTypes.isRequired,
+};
 
-export default InlineImageRenderer
+export default InlineImageRenderer;

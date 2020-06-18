@@ -7,7 +7,7 @@ export default {
     {
       name: 'title',
       Title: 'Title',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'menu',
@@ -15,18 +15,18 @@ export default {
       type: 'array',
       description: 'Use Navigation Item for single link and Group for bundled links',
       of: [
-       {
-            type: 'navItem'
-       },
-       {
-            type: 'navGroup'
-       }   
-      ]
+        {
+          type: 'navItem',
+        },
+        {
+          type: 'navGroup',
+        },
+      ],
     },
   ],
   preview: {
     select: {
-      title: "title",
-    }
-  }
-}
+      title: 'title',
+    },
+  },
+};

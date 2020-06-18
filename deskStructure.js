@@ -1,8 +1,9 @@
-import S from '@sanity/desk-tool/structure-builder'
-import client from 'part:@sanity/base/client'
-const { dataset} = client.config()
+import S from '@sanity/desk-tool/structure-builder';
+import client from 'part:@sanity/base/client';
 
-const mainTitle = dataset === 'epoxypro' ? 'Toronto Epoxy Pro' : 'The City Painters'
+const { dataset } = client.config();
+
+const mainTitle = dataset === 'epoxypro' ? 'Toronto Epoxy Pro' : 'The City Painters';
 
 export default () =>
   S.list()
@@ -10,28 +11,20 @@ export default () =>
     .items([
       S.listItem()
         .title('Site Settings')
+        .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
+      S.listItem()
+        .title('Company Info')
         .child(
-            S.document()
-              .schemaType('siteSettings')
-              .documentId('siteSettings')
+          S.list()
+            .title('Company Info')
+            .items([
+              S.listItem()
+                .title('Contact Info')
+                .child(S.document().schemaType('companyInfo').documentId('companyInfo')),
+              S.documentTypeListItem('socialInfo').title('Social Info'),
+              S.documentTypeListItem('companyLogo').title('Company Logos'),
+            ]),
         ),
-        S.listItem()
-          .title('Company Info')
-          .child(
-            S.list()
-              .title('Company Info')
-              .items([
-                S.listItem()
-                  .title('Contact Info')
-                  .child(
-                    S.document()
-                      .schemaType('companyInfo')
-                      .documentId('companyInfo')
-                  ), 
-                S.documentTypeListItem('socialInfo').title('Social Info'),
-                S.documentTypeListItem('companyLogo').title('Company Logos'),
-              ])
-          ),
       S.listItem()
         .title('Website')
         .child(
@@ -43,7 +36,7 @@ export default () =>
               S.divider(),
               S.documentTypeListItem('guide').title('Guides'),
               S.documentTypeListItem('category').title('Guide Categories'),
-            ])
+            ]),
         ),
       S.documentTypeListItem('person').title('People'),
-    ])
+    ]);

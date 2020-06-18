@@ -1,9 +1,9 @@
-import { FaExternalLinkAlt, FaLink } from 'react-icons/fa'
-import { MdLink, MdImage } from 'react-icons/md'
-import ExternalLinkRenderer from '../components/externalLinkRenderer'
-import InternalLinkRenderer from '../components/internalLinkRenderer'
-import JumpLinkRenderer from '../components/jumpLinkRenderer'
-import InlineImageRenderer from '../components/inlineImageRenderer'
+import { FaExternalLinkAlt, FaLink } from 'react-icons/fa';
+import { MdLink, MdImage } from 'react-icons/md';
+import ExternalLinkRenderer from '../components/ExternalLinkRenderer';
+import InternalLinkRenderer from '../components/InternalLinkRenderer';
+import JumpLinkRenderer from '../components/JumpLinkRenderer';
+import InlineImageRenderer from '../components/InlineImageRenderer';
 
 export default {
   title: 'Block Content',
@@ -13,13 +13,13 @@ export default {
     {
       type: 'block',
       styles: [
-        {title: 'Normal', value: 'normal'},
-        {title: 'Heading 2', value: 'h2'},
-        {title: 'H3', value: 'h3'},
-        {title: 'H4', value: 'h4'},
-        {title: 'H5', value: 'h5'},
-        {title: 'H6', value: 'h6'},
-        {title: 'Quote', value: 'blockquote'}
+        { title: 'Normal', value: 'normal' },
+        { title: 'Heading 2', value: 'h2' },
+        { title: 'H3', value: 'h3' },
+        { title: 'H4', value: 'h4' },
+        { title: 'H5', value: 'h5' },
+        { title: 'H6', value: 'h6' },
+        { title: 'Quote', value: 'blockquote' },
       ],
       marks: {
         annotations: [
@@ -29,20 +29,20 @@ export default {
             type: 'object',
             blockEditor: {
               icon: FaExternalLinkAlt,
-              render: ExternalLinkRenderer
+              render: ExternalLinkRenderer,
             },
             fields: [
               {
                 title: 'URL',
                 name: 'href',
                 type: 'url',
-                validation: Rule =>
+                validation: (Rule) =>
                   Rule.uri({
                     allowRelative: true,
-                    scheme: ['https', 'http', 'mailto', 'tel']
-                  })
+                    scheme: ['https', 'http', 'mailto', 'tel'],
+                  }),
               },
-            ]
+            ],
           },
           {
             name: 'internalLink',
@@ -50,19 +50,16 @@ export default {
             title: 'Internal link',
             blockEditor: {
               icon: FaLink,
-              render: InternalLinkRenderer
+              render: InternalLinkRenderer,
             },
             fields: [
               {
                 name: 'reference',
                 type: 'reference',
                 title: 'Reference',
-                to: [
-                  { type: 'guide' },
-                  { type: 'page' }
-                ]
-              }
-            ]
+                to: [{ type: 'guide' }, { type: 'page' }],
+              },
+            ],
           },
           {
             name: 'jumpLink',
@@ -70,16 +67,16 @@ export default {
             title: 'Page Jump',
             blockEditor: {
               icon: MdLink,
-              render: JumpLinkRenderer
+              render: JumpLinkRenderer,
             },
             fields: [
               {
                 name: 'heading',
                 type: 'string',
                 title: 'Heading',
-                description: 'The exact full heading of jump destination.'
-              }
-            ]
+                description: 'The exact full heading of jump destination.',
+              },
+            ],
           },
           {
             title: 'Inline Image',
@@ -87,30 +84,27 @@ export default {
             type: 'image',
             blockEditor: {
               icon: MdImage,
-              render: InlineImageRenderer
+              render: InlineImageRenderer,
             },
-            validation: Rule => [
-              Rule.required().error('Missing Image')
-            ]
+            validation: (Rule) => [Rule.required().error('Missing Image')],
           },
-
-        ]
-      }
+        ],
+      },
     },
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'illustration'
+      type: 'illustration',
     },
     {
-      type: 'basicTable'
+      type: 'basicTable',
     },
     {
-      type: 'smartTable'
+      type: 'smartTable',
     },
     {
-      type: 'highlightBox'
-    }
-  ]
-}
+      type: 'highlightBox',
+    },
+  ],
+};

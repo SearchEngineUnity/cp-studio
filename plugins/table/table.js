@@ -7,7 +7,7 @@ export default {
     {
       name: 'rows',
       type: 'array',
-      of: [ {type: "row"}],
+      of: [{ type: 'row' }],
     },
   ],
   inputComponent: TableInput,

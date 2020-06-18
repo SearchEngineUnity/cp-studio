@@ -1,45 +1,45 @@
-import { FaTable } from 'react-icons/fa'
+import { FaTable } from 'react-icons/fa';
 
 export default {
-  name: "basicTable",
-  title: "Table",
-  type: "object",
+  name: 'basicTable',
+  title: 'Table',
+  type: 'object',
   icon: FaTable,
   fields: [
     {
-      name: "title",
-      type: "string",
-      title: "Table Name",
+      name: 'title',
+      type: 'string',
+      title: 'Table Name',
     },
     {
-      name: "options",
-      type: "string",
-      title: "Presentation options"
+      name: 'options',
+      type: 'string',
+      title: 'Presentation options',
     },
     {
-      name: "colHeading",
-      type: "boolean",
-      title: "This table has a column heading",
+      name: 'colHeading',
+      type: 'boolean',
+      title: 'This table has a column heading',
       options: {
-        layout: "checkbox"
-      }
+        layout: 'checkbox',
+      },
     },
     {
-      name: "rowHeading",
-      type: "boolean",
-      title: "This table has a row heading",
+      name: 'rowHeading',
+      type: 'boolean',
+      title: 'This table has a row heading',
       options: {
-        layout: "checkbox"
-      }
+        layout: 'checkbox',
+      },
     },
     {
-      name: "table",
-      type: "table",
+      name: 'table',
+      type: 'table',
     },
   ],
   preview: {
     select: {
-      title: "title",
-    }
-  }
-}
+      title: 'title',
+    },
+  },
+};

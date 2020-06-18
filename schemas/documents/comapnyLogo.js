@@ -1,4 +1,4 @@
-import { FaRegImages } from 'react-icons/fa'
+import { FaRegImages } from 'react-icons/fa';
 
 export default {
   name: 'companyLogo',
@@ -8,18 +8,18 @@ export default {
   fields: [
     {
       name: 'title',
-      title: "Title",
-      type: 'string'
+      title: 'Title',
+      type: 'string',
     },
     {
       name: 'logo',
-      title: "Logo",
-      type: "image"
-    }
+      title: 'Logo',
+      type: 'image',
+    },
   ],
   preview: {
     select: {
-      title: "title",
-    }
-  }
-}
+      title: 'title',
+    },
+  },
+};
