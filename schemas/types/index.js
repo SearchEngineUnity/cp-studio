@@ -1,12 +1,10 @@
 export { default as basicTable } from './basicTable';
 export { default as biography } from './biography';
 export { default as excerpt } from './excerpt';
-export { default as externalLink } from './externalLink';
 export { default as fullBlockContent } from './fullBlockContent';
 export { default as highlightbox } from './highlightbox';
 export { default as illustration } from './illustration';
 export { default as imageSet } from './imageSet';
-export { default as internalLInk } from './internalLink';
 export { default as meta } from './meta';
 export { default as navGroup } from './navGroup';
 export { default as navItem } from './navItem';
