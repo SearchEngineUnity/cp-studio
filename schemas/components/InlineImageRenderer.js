@@ -4,8 +4,7 @@ import client from 'part:@sanity/base/client';
 
 const { projectId, dataset } = client.config();
 
-const InlineImageRenderer = (props) => {
-  const { asset, children } = props;
+const InlineImageRenderer = ({ asset, children }) => {
   if (asset && children) {
     const image = asset._ref.replace(/image-/, '').replace(/\-(?![\s\S]*\-)/, '.'); // eslint-disable-line
     const imageCdn = `https://cdn.sanity.io/images/${projectId}/${dataset}/`;

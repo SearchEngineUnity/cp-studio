@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MdLink } from 'react-icons/md';
 
-const JumpLinkRenderer = (props) => {
-  const { children } = props;
-
+const JumpLinkRenderer = ({ children }) => {
   return (
     <span>
       {children}

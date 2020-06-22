@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaLink } from 'react-icons/fa';
 
-const InternalLinkRenderer = (props) => {
-  const { children } = props;
-
+const InternalLinkRenderer = ({ children }) => {
   return (
     <span>
       {children}

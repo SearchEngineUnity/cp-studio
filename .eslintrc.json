@@ -1,17 +1,17 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
+    "es2020": true,
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 8,
+    "ecmaVersion": 11,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["react", "prettier"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
@@ -20,6 +20,15 @@
     "no-unused-vars": "warn",
     "no-console": "off",
     "no-underscore-dangle": "off",
-    "import/no-unresolved": "warn"
-  }
+    "import/no-unresolved": "warn",
+    "array-element-newline": ["error", "consistent"]
+  },
+  "overrides": [
+    {
+      "files": ["node_modules/*"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
 }

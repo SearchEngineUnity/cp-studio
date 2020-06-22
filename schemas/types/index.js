@@ -1,3 +1,4 @@
+export { rowPlus, smartTable, tableBlock, tableBlockContent, tablePlus } from './smartTable';
 export { default as basicTable } from './basicTable';
 export { default as biography } from './biography';
 export { default as excerpt } from './excerpt';
@@ -9,12 +10,6 @@ export { default as meta } from './meta';
 export { default as navGroup } from './navGroup';
 export { default as navItem } from './navItem';
 export { default as openGraph } from './openGraph';
-export { default as rowPlus } from './rowPlus';
 export { default as simpleBlockContent } from './simpleBlockContent';
-export { default as smartTable } from './smartTable';
-export { default as tableBlock } from './tableBlock';
-export { default as tableBlockContent } from './tableBlockContent';
-export { default as tablePlus } from './tablePlus';
-export { default as tableString } from './tableString';
 export { default as tocLink } from './tocLink';
 export { default as twitterTag } from './twitterTag';

@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import * as segments from './segments';
 import * as types from './types';
 import * as documents from './documents';
+// import * as smartTable from './types/smartTable';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
