@@ -5,5 +5,6 @@ export { default as guide } from './guide';
 export { default as navMenu } from './navMenu';
 export { default as page } from './page';
 export { default as person } from './person';
+export { default as redirect } from './redirect';
 export { default as siteSettings } from './siteSettings';
 export { default as socialInfo } from './socialInfo';

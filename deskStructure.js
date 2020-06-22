@@ -38,5 +38,7 @@ export default () =>
               S.documentTypeListItem('category').title('Guide Categories'),
             ]),
         ),
+      S.documentTypeListItem('redirect').title('Redirects'),
       S.documentTypeListItem('person').title('People'),
+
     ]);
