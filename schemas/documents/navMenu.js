@@ -1,8 +1,10 @@
+import { FiNavigation2 } from 'react-icons/fi';
+
 export default {
   name: 'navMenu',
   title: 'Navigation Menu',
   type: 'document',
-
+  icon: FiNavigation2,
   fields: [
     {
       name: 'title',

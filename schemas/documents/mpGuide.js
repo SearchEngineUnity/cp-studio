@@ -1,8 +1,10 @@
+import { FaBook } from 'react-icons/fa';
+
 export default {
   name: 'mpGuide',
   type: 'document',
   title: 'MP Guide',
-  icon: '',
+  icon: FaBook,
   fieldsets: [
     {
       name: 'general',
@@ -38,7 +40,7 @@ export default {
     },
     {
       name: 'chapters',
-      title: 'Chapter List',
+      title: 'Chapters',
       options: {
         collapsible: true,
         collapsed: false,
@@ -179,7 +181,7 @@ export default {
     },
     {
       name: 'chapters',
-      title: 'Chapter List',
+      title: 'List',
       fieldset: 'chapters',
       type: 'array',
       of: [{ type: 'chapter' }],

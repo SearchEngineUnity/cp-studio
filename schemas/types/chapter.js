@@ -6,7 +6,7 @@ export default {
     {
       name: 'title',
       title: 'Chapter Title',
-      type: 'text',
+      type: 'string',
       description: 'This is used as the Chapter Navigation title',
     },
     {

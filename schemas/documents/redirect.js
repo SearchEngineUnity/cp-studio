@@ -1,7 +1,10 @@
+import { BsArrowLeftRight } from 'react-icons/bs';
+
 export default {
   name: 'redirect',
   type: 'document',
   title: 'Redirect',
+  icon: BsArrowLeftRight,
   fields: [
     {
       name: 'redirectTo',

@@ -1,5 +1,7 @@
 import { MdWeb } from 'react-icons/md';
-// import * as segments from '../segments';
+import * as segments from '../segments';
+
+console.log(segments);
 
 export default {
   name: 'page',
@@ -91,13 +93,10 @@ export default {
       fieldsest: 'segments',
       title: 'Segments',
       of: [
-        {
-          type: 'grid',
-          // ...Object.values(segments).map(({ name, title }) => ({
-          //   type: name,
-          //   title,
-          // })),
-        },
+        ...Object.values(segments).map(({ name, title }) => ({
+          type: name,
+          title,
+        })),
       ],
     },
     {

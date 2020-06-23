@@ -1,10 +1,10 @@
-import { FaFileInvoice } from 'react-icons/fa';
+import { RiPagesLine } from 'react-icons/ri';
 
 export default {
   name: 'guide',
   type: 'document',
   title: 'Guide',
-  icon: FaFileInvoice,
+  icon: RiPagesLine,
   fieldsets: [
     {
       name: 'general',

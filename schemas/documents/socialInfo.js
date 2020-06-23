@@ -1,11 +1,11 @@
-import { MdBusiness } from 'react-icons/md';
+import MouseIcon from '../components/MouseIcon';
 
 export default {
   name: 'socialInfo',
   title: 'Social Info',
   description: 'social media links',
   type: 'document',
-  icon: MdBusiness,
+  icon: MouseIcon,
   fields: [
     {
       name: 'social',

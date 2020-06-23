@@ -1,7 +1,10 @@
+import { IoIosPeople } from 'react-icons/io';
+
 export default {
   name: 'person',
   title: 'Person',
   type: 'document',
+  icon: IoIosPeople,
   fields: [
     {
       name: 'name',

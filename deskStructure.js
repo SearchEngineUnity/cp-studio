@@ -1,5 +1,8 @@
 import S from '@sanity/desk-tool/structure-builder';
 import client from 'part:@sanity/base/client';
+import { MdSettings, MdBusiness } from 'react-icons/md';
+import { BsInfoSquare, BsArrowLeftRight } from 'react-icons/bs';
+import { AiOutlineGlobal } from 'react-icons/ai';
 
 const { dataset } = client.config();
 
@@ -11,15 +14,18 @@ export default () =>
     .items([
       S.listItem()
         .title('Site Settings')
+        .icon(MdSettings)
         .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
       S.listItem()
         .title('Company Info')
+        .icon(BsInfoSquare)
         .child(
           S.list()
             .title('Company Info')
             .items([
               S.listItem()
                 .title('Contact Info')
+                .icon(MdBusiness)
                 .child(S.document().schemaType('companyInfo').documentId('companyInfo')),
               S.documentTypeListItem('socialInfo').title('Social Info'),
               S.documentTypeListItem('companyLogo').title('Company Logos'),
@@ -27,6 +33,7 @@ export default () =>
         ),
       S.listItem()
         .title('Website')
+        .icon(AiOutlineGlobal)
         .child(
           S.list()
             .title('Website')
@@ -41,5 +48,4 @@ export default () =>
         ),
       S.documentTypeListItem('redirect').title('Redirects'),
       S.documentTypeListItem('person').title('People'),
-
     ]);
