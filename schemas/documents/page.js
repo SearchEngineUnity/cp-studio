@@ -1,43 +1,142 @@
 import { MdWeb } from 'react-icons/md';
-import * as segments from '../segments';
+// import * as segments from '../segments';
 
 export default {
   name: 'page',
   type: 'document',
-  title: 'Page',
+  title: 'Structured Page',
   icon: MdWeb,
+  fieldsets: [
+    {
+      name: 'general',
+      title: 'SEO and General Fields',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    },
+    {
+      name: 'social',
+      title: 'Social Sharing',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    },
+    {
+      name: 'segments',
+      title: 'Segments',
+      options: {
+        collapsible: true,
+        collapsed: false,
+      },
+    },
+    {
+      name: 'indexing',
+      title: 'Indexing',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    },
+  ],
   fields: [
+    {
+      name: 'shortName',
+      title: 'Short Name',
+      type: 'string',
+      fieldset: 'general',
+      validation: (Rule) => [
+        Rule.required().error('Field is required'),
+        // add a custom rule for isUnique
+      ],
+    },
     {
       name: 'title',
       type: 'string',
-      title: 'Title',
-      description: 'This is the title that shows up in navigation',
+      title: 'Page Title',
+      description: 'Optimal length under 60 characters for Google SERP',
+      fieldset: 'general',
+      validation: (Rule) => [
+        Rule.required().error('Field is required'),
+        Rule.max(60).warning('Length over optimal'),
+      ],
     },
     {
-      name: 'slug',
-      type: 'slug',
-      title: 'Slug',
-      description: 'This is the breadcrumb for this page. Will show as domain.com/slug',
+      name: 'description',
+      title: 'Meta Description',
+      type: 'text',
+      description: 'Optimal length is under 160 characters for Google SERP',
+      fieldset: 'general',
+      validation: (Rule) => [
+        Rule.required().error('Field is require.'),
+        Rule.max(160).warning('Length over optimal'),
+      ],
+    },
+    {
+      name: 'facebook',
+      title: 'Facebook Share',
+      type: 'openGraph',
+      fieldset: 'social',
+    },
+    {
+      name: 'twitter',
+      title: 'Twitter Share',
+      type: 'twitterTag',
+      fieldset: 'social',
     },
     {
       name: 'segments',
       type: 'array',
+      fieldsest: 'segments',
       title: 'Segments',
-      description:
-        'Use the custom version should the segment be unique to this page. To reference a shared Segment, please create it first before referencing.',
       of: [
-        { type: 'string' },
-        // ...Object.values(segments).map(({ name, title }) => ({
-        //   type: name,
-        //   title: `${title}`
-        // })),
+        {
+          type: 'grid',
+          // ...Object.values(segments).map(({ name, title }) => ({
+          //   type: name,
+          //   title,
+          // })),
+        },
       ],
     },
     {
-      name: 'metaTags',
-      type: 'meta',
-      title: 'Meta Tags',
-      description: 'REQUIRED! Renders meta info in <head>',
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      description: 'This guide URL will show as domain.com/guide/slug',
+      fieldset: 'indexing',
+      validation: (Rule) => [Rule.required().error('Field is required')],
+    },
+    {
+      name: 'noindex',
+      title: 'Noindex',
+      type: 'boolean',
+      fieldset: 'indexing',
+    },
+    {
+      name: 'nofollow',
+      title: 'Nofollow',
+      type: 'boolean',
+      fieldset: 'indexing',
+    },
+    {
+      name: 'canonical',
+      title: 'Canonical URL',
+      type: 'url',
+      fieldset: 'indexing',
+    },
+    {
+      name: 'noRobots',
+      title: 'Remove from Robots.txt',
+      type: 'boolean',
+      fieldset: 'indexing',
+    },
+    {
+      name: 'noSitemap',
+      title: 'Remove from Sitemap',
+      type: 'boolean',
+      fieldset: 'indexing',
     },
   ],
   preview: {

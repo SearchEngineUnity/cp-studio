@@ -32,9 +32,10 @@ export default () =>
             .title('Website')
             .items([
               S.documentTypeListItem('navMenu').title('Navigation'),
-              S.documentTypeListItem('page').title('Pages'),
+              S.documentTypeListItem('page').title('Structured Pages'),
               S.divider(),
               S.documentTypeListItem('guide').title('Guides'),
+              S.documentTypeListItem('mpGuide').title('MP Guides'),
               S.documentTypeListItem('category').title('Guide Categories'),
             ]),
         ),

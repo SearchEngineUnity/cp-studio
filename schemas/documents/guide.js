@@ -39,8 +39,8 @@ export default {
       },
     },
     {
-      name: 'searchEngineAccess',
-      title: 'Search Engine Access',
+      name: 'indexing',
+      title: 'Indexing',
       options: {
         collapsible: true,
         collapsed: true,
@@ -54,7 +54,7 @@ export default {
       type: 'string',
       fieldset: 'general',
       validation: (Rule) => [
-        Rule.required().error('Short name is required'),
+        Rule.required().error('Field is required'),
         // add a custom rule for isUnique
       ],
     },
@@ -133,6 +133,12 @@ export default {
       fieldset: 'general',
     },
     {
+      name: 'isChapter',
+      title: 'Is this an MP guide chapter?',
+      type: 'boolean',
+      fieldset: 'general',
+    },
+    {
       name: 'heroImage',
       title: 'Hero Image',
       type: 'imageSet',
@@ -176,38 +182,38 @@ export default {
       title: 'Slug',
       type: 'slug',
       description: 'This guide URL will show as domain.com/guide/slug',
-      fieldset: 'searchEngineAccess',
+      fieldset: 'indexing',
       validation: (Rule) => [Rule.required().error('Field is required')],
     },
     {
       name: 'noindex',
       title: 'Noindex',
       type: 'boolean',
-      fieldset: 'searchEngineAccess',
+      fieldset: 'indexing',
     },
     {
       name: 'nofollow',
       title: 'Nofollow',
       type: 'boolean',
-      fieldset: 'searchEngineAccess',
+      fieldset: 'indexing',
     },
     {
       name: 'canonical',
       title: 'Canonical URL',
       type: 'url',
-      fieldset: 'searchEngineAccess',
+      fieldset: 'indexing',
     },
     {
       name: 'noRobots',
       title: 'Remove from Robots.txt',
       type: 'boolean',
-      fieldset: 'searchEngineAccess',
+      fieldset: 'indexing',
     },
     {
       name: 'noSitemap',
       title: 'Remove from Sitemap',
       type: 'boolean',
-      fieldset: 'searchEngineAccess',
+      fieldset: 'indexing',
     },
   ],
   preview: {

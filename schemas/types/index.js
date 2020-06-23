@@ -1,6 +1,9 @@
 export { rowPlus, smartTable, tableBlock, tableBlockContent, tablePlus } from './smartTable';
 export { default as basicTable } from './basicTable';
 export { default as biography } from './biography';
+export { default as chapter } from './chapter';
+export { default as card } from './card';
+export { default as grid } from './grid';
 export { default as excerpt } from './excerpt';
 export { default as fullBlockContent } from './fullBlockContent';
 export { default as highlightbox } from './highlightbox';
