@@ -1,7 +1,7 @@
 import S from '@sanity/desk-tool/structure-builder';
 import client from 'part:@sanity/base/client';
 import { MdSettings, MdBusiness } from 'react-icons/md';
-import { BsInfoSquare, BsArrowLeftRight } from 'react-icons/bs';
+import { BsInfoSquare } from 'react-icons/bs';
 import { AiOutlineGlobal } from 'react-icons/ai';
 
 const { dataset } = client.config();

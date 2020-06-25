@@ -1,7 +1,7 @@
 export default {
   name: 'hero',
   title: 'Hero',
-  type: 'object',
+  type: 'document',
   fields: [
     {
       name: 'title',
@@ -13,6 +13,7 @@ export default {
   preview: {
     select: {
       title: 'title',
+      subtitle: '_type',
     },
   },
 };

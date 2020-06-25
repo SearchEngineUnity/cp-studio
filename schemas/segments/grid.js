@@ -1,7 +1,7 @@
 export default {
   name: 'grid',
   title: 'Grid',
-  type: 'object',
+  type: 'document',
   fields: [
     {
       name: 'title',
@@ -22,7 +22,6 @@ export default {
         list: [
           { title: 'Image + Title + Clickable', value: '1' },
           { title: 'Image + Title + Non-Clickable', value: '2' },
-          { title: 'Testimonial', value: 'testimonial' },
         ],
       },
       validation: (Rule) => [Rule.required().error('Field is required')],
@@ -52,6 +51,7 @@ export default {
   preview: {
     select: {
       title: 'title',
+      subtitle: '_type',
     },
   },
 };

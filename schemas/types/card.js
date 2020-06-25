@@ -19,14 +19,9 @@ export default {
       type: 'illustration',
     },
     {
-      name: 'link',
-      title: 'Link URL',
-      type: 'url',
-    },
-    {
-      name: 'btnText',
-      title: 'Button Text / CTA text',
-      type: 'string',
+      title: 'Button',
+      name: 'button',
+      type: 'ctaButton',
     },
   ],
   preview: {

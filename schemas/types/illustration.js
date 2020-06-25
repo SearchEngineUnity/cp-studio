@@ -16,11 +16,6 @@ export default {
       type: 'string',
       title: 'Alt',
     },
-    {
-      name: 'caption',
-      type: 'text',
-      title: 'Caption',
-    },
   ],
   preview: {
     select: {
