@@ -103,7 +103,7 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'This guide URL will show as domain.com/slug',
+      description: 'This page URL will show as domain.com/slug',
       fieldset: 'indexing',
       validation: (Rule) => [Rule.required().error('Field is required')],
     },
