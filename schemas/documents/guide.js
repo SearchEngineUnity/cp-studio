@@ -181,7 +181,7 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      description: 'This guide URL will show as domain.com/guide/slug',
+      description: 'This guide URL will show as domain.com/slug',
       fieldset: 'indexing',
       validation: (Rule) => [Rule.required().error('Field is required')],
     },
@@ -218,15 +218,16 @@ export default {
   ],
   preview: {
     select: {
-      title: 'shortName',
+      shortName: 'shortName',
       slug: 'slug.current',
-      date: 'displayDate',
       media: 'heroImage.mainImage.image',
+      isChapter: 'isChapter',
     },
-    prepare({ title, slug, date, media }) {
+    prepare({ shortName, slug, media, isChapter }) {
+      const mp = isChapter ? 'MP - ' : '';
       return {
-        title,
-        subtitle: `/guide/${slug}`,
+        title: `${mp}${shortName}`,
+        subtitle: `/${slug}`,
         media,
       };
     },
