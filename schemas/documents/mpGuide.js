@@ -165,14 +165,6 @@ export default {
       fieldset: 'social',
     },
     {
-      name: 'toc',
-      title: 'Table of Content',
-      type: 'array',
-      of: [{ type: 'tocLink' }],
-      fieldset: 'mainContent',
-      validation: (Rule) => [Rule.required().error('Field is required')],
-    },
-    {
       name: 'body',
       type: 'fullBlockContent',
       title: 'Body',
