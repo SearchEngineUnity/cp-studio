@@ -4,12 +4,12 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'internal',
+      name: 'internalLink',
       title: 'Internal Link',
       type: 'internalLink',
     },
     {
-      name: 'external',
+      name: 'externalLink',
       title: 'External Link',
       type: 'externalLink',
     },

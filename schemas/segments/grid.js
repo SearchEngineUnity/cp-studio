@@ -44,7 +44,7 @@ export default {
     },
     {
       name: 'footer',
-      title: 'Section footer',
+      title: 'Segment footer',
       type: 'simpleBlockContent',
     },
   ],

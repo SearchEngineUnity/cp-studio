@@ -15,13 +15,19 @@ export default {
     },
     {
       name: 'cardImage',
-      title: 'Image',
+      title: 'Illustration',
       type: 'illustration',
     },
     {
-      title: 'Button',
-      name: 'button',
-      type: 'ctaButton',
+      name: 'btnText',
+      title: 'CTA Button Text',
+      type: 'string',
+    },
+    {
+      name: 'cardLink',
+      title: 'Link',
+      type: 'linkSet',
+      description: 'The first link will apply',
     },
   ],
   preview: {
