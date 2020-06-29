@@ -1,7 +1,7 @@
 // need to set up prview_url based on env veriables...
 
 export default function PreviewAction(props) {
-  const PREVIEW_URL = '';
+  const PREVIEW_URL = 'https://cp-studio-preview.herokuapp.com';
   const draft = !!props.draft; // eslint-disable-line
   const published = !!props.published; // eslint-disable-line
   const { type } = props;
@@ -32,7 +32,7 @@ export default function PreviewAction(props) {
     return {
       label: 'Preview',
       onHandle: () => {
-        window.open(`${PREVIEW_URL}/guide/${slug}`, '_blank');
+        window.open(`${PREVIEW_URL}/${slug}`, '_blank');
       },
     };
   }

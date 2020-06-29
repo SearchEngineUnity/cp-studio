@@ -5,6 +5,16 @@ export default {
   title: 'Illustration',
   type: 'object',
   icon: MdImage,
+  fieldsets: [
+    {
+      name: 'caption',
+      title: 'Caption',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    },
+  ],
   fields: [
     {
       name: 'image',
@@ -15,6 +25,12 @@ export default {
       name: 'alt',
       type: 'string',
       title: 'Alt',
+    },
+    {
+      name: 'caption',
+      type: 'text',
+      rows: 5,
+      fieldset: 'caption',
     },
   ],
   preview: {

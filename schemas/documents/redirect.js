@@ -17,7 +17,7 @@ export default {
       type: 'array',
       title: 'Redirected Urls',
       description:
-        'Upon landing on one of these URLs, the visitor will be redirected to the path selected below',
+        'Please enter the full path after the domain address starting with /. Upon landing on one of these URLs, the visitor will be redirected to the path selected above',
       of: [{ type: 'string' }],
     },
   ],
