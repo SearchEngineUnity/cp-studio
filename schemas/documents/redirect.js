@@ -9,8 +9,14 @@ export default {
     {
       name: 'redirectTo',
       title: 'Redirect To',
-      type: 'reference',
-      to: [{ type: 'page' }, { type: 'guide' }],
+      type: 'url',
+      description:
+        'For internal redirect, please enter full path after the domain address starting with /. For external redirect, please enter the full url starting with https or http',
+      validation: (Rule) =>
+        Rule.uri({
+          allowRelative: true,
+          scheme: ['https', 'http'],
+        }),
     },
     {
       name: 'redirectPaths',
